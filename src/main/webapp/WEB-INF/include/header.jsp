@@ -20,7 +20,7 @@
 			} else {
 		%>				
 				<a href="/ssa/login"><li>로그인</li></a>
-				<a href="/ssa/register"><li>회원가입</li></a>
+				<a href="/ssa/register"><li>회원가입</li></a> 
 		<%
 			}
 		%>

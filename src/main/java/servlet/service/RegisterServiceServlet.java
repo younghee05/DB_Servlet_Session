@@ -41,6 +41,7 @@ public class RegisterServiceServlet extends HttpServlet {
 				.name(name)
 				.email(email)
 				.build();
+		
 		UserDao.save(user);
 		StringBuilder responsebody = new StringBuilder();
 		responsebody.append("<script>");
