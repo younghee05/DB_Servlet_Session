@@ -16,7 +16,14 @@ public class LogoutServiceServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		session.invalidate(); // 강제로 세션 만료
-		resp.sendRedirect("/ssa/index");
+//		resp.sendRedirect("/ssa/index");
+		StringBuilder responseBody = new StringBuilder();
+		responseBody.append("<script>");
+		responseBody.append("alert('로그아웃 완료 !');");
+		responseBody.append("location.href='/ssa/index';");
+		responseBody.append("</script>");
+		resp.setContentType("text/html");
+		resp.getWriter().println(responseBody.toString());
 	}
 
 }

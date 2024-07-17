@@ -28,7 +28,7 @@ public class UserDao {
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
-				pool.freeConnection(con,  pstmt);
+				pool.freeConnection(con, pstmt);
 			}
 			
 			return successCount;
